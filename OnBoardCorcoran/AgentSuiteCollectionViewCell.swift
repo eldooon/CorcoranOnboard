@@ -29,7 +29,7 @@ class AgentSuiteCollectionViewCell: UICollectionViewCell {
         
         contentView.addSubview(agentSuiteLabel)
         agentSuiteLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(contentView.snp.bottom).offset(10)
+            make.top.equalTo(contentView.snp.bottom)
             make.centerX.equalTo(contentView.snp.centerX)
         }
     }

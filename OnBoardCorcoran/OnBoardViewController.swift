@@ -30,12 +30,11 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
     
     override func viewDidAppear(_ animated: Bool) {
         
-        //If not onBoarded, show onboard
+//        If not onBoarded, show onboard
         
-        //        if onBoarded == false {
-        //            createOnboard()
-        //        }
-        
+        if onBoarded == false {
+            createOnboard()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,6 +44,13 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
     
     
     func createLayout() {
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
+        self.navigationController?.navigationBar.barTintColor = UIColor.black
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: AgentSuiteStyle.imageOfMoreButton, style: .done, target: self, action: nil)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.title = "Corcoran OnBoard"
+        
         
         view.addSubview(agentSuiteCollectionView)
         agentSuiteCollectionView.backgroundColor = UIColor.clear
