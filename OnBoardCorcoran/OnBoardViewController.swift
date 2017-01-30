@@ -48,6 +48,7 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         self.navigationController?.navigationBar.barTintColor = UIColor.black
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: AgentSuiteStyle.imageOfMoreButton, style: .done, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: AgentSuiteStyle.imageOfSearchButton, style: .done, target: self, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.title = "Corcoran OnBoard"
         
