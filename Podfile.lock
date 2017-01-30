@@ -1,0 +1,15 @@
+PODS:
+  - Onboard (2.3.1)
+  - SnapKit (3.1.2)
+
+DEPENDENCIES:
+  - Onboard
+  - SnapKit (~> 3.1.2)
+
+SPEC CHECKSUMS:
+  Onboard: b6871f25ac753175b2ab9a362fb2feb26a81a311
+  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+
+PODFILE CHECKSUM: d0dbf7cba80beeac31ac2faa03eac3cc65c32949
+
+COCOAPODS: 1.2.0.rc.1

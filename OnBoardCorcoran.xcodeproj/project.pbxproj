@@ -1,0 +1,397 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEABB1761E3B91780000E47A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABB1751E3B91780000E47A /* AppDelegate.swift */; };
+		BEABB1781E3B91780000E47A /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABB1771E3B91780000E47A /* OnBoardViewController.swift */; };
+		BEABB17B1E3B91780000E47A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEABB1791E3B91780000E47A /* Main.storyboard */; };
+		BEABB17D1E3B91780000E47A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEABB17C1E3B91780000E47A /* Assets.xcassets */; };
+		BEABB1801E3B91780000E47A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEABB17E1E3B91780000E47A /* LaunchScreen.storyboard */; };
+		BED078801E3EC64200BEE257 /* AgentSuiteStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0787F1E3EC64200BEE257 /* AgentSuiteStyle.swift */; };
+		BEDFCD361E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFCD351E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift */; };
+		BEDFCD381E3BE74800167BD8 /* AgentSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFCD371E3BE74800167BD8 /* AgentSuite.swift */; };
+		ED3E21730D23F285324DA157 /* Pods_OnBoardCorcoran.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966631AF854AD85225F9D768 /* Pods_OnBoardCorcoran.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		518AAB468298C90549AE0045 /* Pods-OnBoardCorcoran.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBoardCorcoran.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnBoardCorcoran/Pods-OnBoardCorcoran.debug.xcconfig"; sourceTree = "<group>"; };
+		92DD41E8C646A74BF5EB9D33 /* Pods-OnBoardCorcoran.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBoardCorcoran.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnBoardCorcoran/Pods-OnBoardCorcoran.release.xcconfig"; sourceTree = "<group>"; };
+		966631AF854AD85225F9D768 /* Pods_OnBoardCorcoran.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnBoardCorcoran.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEABB1721E3B91780000E47A /* OnBoardCorcoran.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnBoardCorcoran.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEABB1751E3B91780000E47A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BEABB1771E3B91780000E47A /* OnBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
+		BEABB17A1E3B91780000E47A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BEABB17C1E3B91780000E47A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEABB17F1E3B91780000E47A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEABB1811E3B91780000E47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BED0787F1E3EC64200BEE257 /* AgentSuiteStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSuiteStyle.swift; sourceTree = "<group>"; };
+		BEDFCD351E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSuiteCollectionViewCell.swift; sourceTree = "<group>"; };
+		BEDFCD371E3BE74800167BD8 /* AgentSuite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSuite.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEABB16F1E3B91770000E47A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED3E21730D23F285324DA157 /* Pods_OnBoardCorcoran.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22AC78F264FEA0A9669833CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				966631AF854AD85225F9D768 /* Pods_OnBoardCorcoran.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9E1DC4561131E5045658BE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				518AAB468298C90549AE0045 /* Pods-OnBoardCorcoran.debug.xcconfig */,
+				92DD41E8C646A74BF5EB9D33 /* Pods-OnBoardCorcoran.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BEABB1691E3B91770000E47A = {
+			isa = PBXGroup;
+			children = (
+				BEABB1741E3B91780000E47A /* OnBoardCorcoran */,
+				BEABB1731E3B91780000E47A /* Products */,
+				B9E1DC4561131E5045658BE5 /* Pods */,
+				22AC78F264FEA0A9669833CC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BEABB1731E3B91780000E47A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEABB1721E3B91780000E47A /* OnBoardCorcoran.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEABB1741E3B91780000E47A /* OnBoardCorcoran */ = {
+			isa = PBXGroup;
+			children = (
+				BEABB1751E3B91780000E47A /* AppDelegate.swift */,
+				BEABB1771E3B91780000E47A /* OnBoardViewController.swift */,
+				BEDFCD351E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift */,
+				BED0787F1E3EC64200BEE257 /* AgentSuiteStyle.swift */,
+				BEDFCD371E3BE74800167BD8 /* AgentSuite.swift */,
+				BEABB1791E3B91780000E47A /* Main.storyboard */,
+				BEABB17C1E3B91780000E47A /* Assets.xcassets */,
+				BEABB17E1E3B91780000E47A /* LaunchScreen.storyboard */,
+				BEABB1811E3B91780000E47A /* Info.plist */,
+			);
+			path = OnBoardCorcoran;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEABB1711E3B91770000E47A /* OnBoardCorcoran */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEABB1841E3B91780000E47A /* Build configuration list for PBXNativeTarget "OnBoardCorcoran" */;
+			buildPhases = (
+				A4B77D7F4D02D4951A175963 /* [CP] Check Pods Manifest.lock */,
+				BEABB16E1E3B91770000E47A /* Sources */,
+				BEABB16F1E3B91770000E47A /* Frameworks */,
+				BEABB1701E3B91770000E47A /* Resources */,
+				386162FA6557F9F53B86F121 /* [CP] Embed Pods Frameworks */,
+				FC003B16EB5B5DD1DEBCD975 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnBoardCorcoran;
+			productName = OnBoardCorcoran;
+			productReference = BEABB1721E3B91780000E47A /* OnBoardCorcoran.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEABB16A1E3B91770000E47A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Eldon;
+				TargetAttributes = {
+					BEABB1711E3B91770000E47A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = LQY7Q4QMHY;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BEABB16D1E3B91770000E47A /* Build configuration list for PBXProject "OnBoardCorcoran" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEABB1691E3B91770000E47A;
+			productRefGroup = BEABB1731E3B91780000E47A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEABB1711E3B91770000E47A /* OnBoardCorcoran */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEABB1701E3B91770000E47A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEABB1801E3B91780000E47A /* LaunchScreen.storyboard in Resources */,
+				BEABB17D1E3B91780000E47A /* Assets.xcassets in Resources */,
+				BEABB17B1E3B91780000E47A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		386162FA6557F9F53B86F121 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnBoardCorcoran/Pods-OnBoardCorcoran-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4B77D7F4D02D4951A175963 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC003B16EB5B5DD1DEBCD975 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnBoardCorcoran/Pods-OnBoardCorcoran-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEABB16E1E3B91770000E47A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BED078801E3EC64200BEE257 /* AgentSuiteStyle.swift in Sources */,
+				BEDFCD381E3BE74800167BD8 /* AgentSuite.swift in Sources */,
+				BEABB1781E3B91780000E47A /* OnBoardViewController.swift in Sources */,
+				BEDFCD361E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift in Sources */,
+				BEABB1761E3B91780000E47A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BEABB1791E3B91780000E47A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEABB17A1E3B91780000E47A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BEABB17E1E3B91780000E47A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEABB17F1E3B91780000E47A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEABB1821E3B91780000E47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BEABB1831E3B91780000E47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEABB1851E3B91780000E47A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 518AAB468298C90549AE0045 /* Pods-OnBoardCorcoran.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LQY7Q4QMHY;
+				INFOPLIST_FILE = OnBoardCorcoran/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Eldon.OnBoardCorcoran;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BEABB1861E3B91780000E47A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92DD41E8C646A74BF5EB9D33 /* Pods-OnBoardCorcoran.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LQY7Q4QMHY;
+				INFOPLIST_FILE = OnBoardCorcoran/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Eldon.OnBoardCorcoran;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEABB16D1E3B91770000E47A /* Build configuration list for PBXProject "OnBoardCorcoran" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEABB1821E3B91780000E47A /* Debug */,
+				BEABB1831E3B91780000E47A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEABB1841E3B91780000E47A /* Build configuration list for PBXNativeTarget "OnBoardCorcoran" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEABB1851E3B91780000E47A /* Debug */,
+				BEABB1861E3B91780000E47A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEABB16A1E3B91770000E47A /* Project object */;
+}

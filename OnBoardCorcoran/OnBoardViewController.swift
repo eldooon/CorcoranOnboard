@@ -1,0 +1,154 @@
+//
+//  ViewController.swift
+//  OnBoardCorcoran
+//
+//  Created by Eldon Chan on 1/27/17.
+//  Copyright © 2017 Eldon. All rights reserved.
+//
+
+import UIKit
+import Onboard
+
+
+class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    var onBoarded = false
+    var agentSuiteCollectionView : UICollectionView!
+    var agentSuiteData = SuiteData()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        agentSuiteData.generateSuiteData()
+        setUpEventCollectionCells()
+        createLayout()
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        //If not onBoarded, show onboard
+        
+        //        if onBoarded == false {
+        //            createOnboard()
+        //        }
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func createLayout() {
+        
+        view.addSubview(agentSuiteCollectionView)
+        agentSuiteCollectionView.backgroundColor = UIColor.clear
+        agentSuiteCollectionView.snp.makeConstraints { (make) in
+            make.top.equalTo(view.snp.top)
+            make.bottom.equalTo(view.snp.bottom)
+            make.left.equalTo(view.snp.left)
+            make.right.equalTo(view.snp.right)
+        }
+    }
+    
+    func createOnboard() {
+        
+        var onboardingVC = OnboardingViewController()
+        
+        let firstPage = OnboardingContentViewController(title: "Welcome to Corcoran OnBoard!", body: "We are here to assist with all your onboarding needs.", image: UIImage(named: "Corcoran"), buttonText: "Continue") { () -> Void in
+            
+            onboardingVC.moveNextPage()
+        }
+        
+        let secondPage = OnboardingContentViewController(title: "Training", body: "Have you completed training at the education center?", image: UIImage(named: "icon"), buttonText: "No, I need training!") { () -> Void in
+            
+            //Email Education center
+        }
+        
+        let thirdPage = OnboardingContentViewController(title: "Computer Setup", body: "Has your computer been setup by helpdesk?", image: UIImage(named: "icon"), buttonText: "Request Assistance") { () -> Void in
+            
+            //Email Helpdesk
+        }
+        
+        let LastPage = OnboardingContentViewController(title: "Congratulations!", body: "You have completed onboarding! To learn more about Corcoran Applications, continue.", image: UIImage(named: "icon"), buttonText: "Learn More") { () -> Void in
+            
+            print("Learn More")
+            self.onBoarded = true
+            onboardingVC.dismiss(animated: true, completion: nil)
+        }
+        
+        //Onboard VC properties
+        onboardingVC = OnboardingViewController.onboard(withBackgroundImage: UIImage(named: "background.jpg"), contents: [firstPage, secondPage, thirdPage, LastPage])
+        onboardingVC.shouldFadeTransitions = true
+        onboardingVC.shouldMaskBackground = false
+        onboardingVC.shouldBlurBackground = false
+        onboardingVC.fadePageControlOnLastPage = true
+        onboardingVC.pageControl.pageIndicatorTintColor = UIColor.darkGray
+        onboardingVC.pageControl.currentPageIndicatorTintColor = UIColor.white
+        onboardingVC.skipButton.setTitleColor(UIColor.white, for: .normal)
+        onboardingVC.allowSkipping = true
+        onboardingVC.skipHandler = {
+            
+            onboardingVC.moveNextPage()
+        }
+        onboardingVC.fadeSkipButtonOnLastPage = true
+        
+        //Onboard VC apperance
+        onboardingVC.underPageControlPadding = 25
+        
+        self.present(onboardingVC, animated: true, completion: nil)
+        
+    }
+    
+    func setUpEventCollectionCells() {
+        
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        
+        //setup Layout
+        let layout = UICollectionViewFlowLayout()
+        
+        layout.scrollDirection = UICollectionViewScrollDirection.vertical
+        layout.itemSize = CGSize(width: screenWidth/2.005, height: screenWidth/2.005)
+        layout.minimumLineSpacing = 1
+        layout.minimumInteritemSpacing = 0
+        
+        agentSuiteCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        agentSuiteCollectionView.dataSource = self
+        agentSuiteCollectionView.delegate = self
+        agentSuiteCollectionView.register(AgentSuiteCollectionViewCell.self, forCellWithReuseIdentifier: "basicCell")
+        agentSuiteCollectionView.showsVerticalScrollIndicator = false
+        agentSuiteCollectionView.showsHorizontalScrollIndicator = false
+        
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return agentSuiteData.suiteData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! AgentSuiteCollectionViewCell
+        
+        cell.agentSuiteImageView.image = agentSuiteData.suiteData[indexPath.item].suiteImage
+        cell.agentSuiteLabel.text = agentSuiteData.suiteData[indexPath.item].suiteName
+        
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // handle tap events
+        print("You selected cell #\(indexPath.item)!")
+    }
+    
+}
+
