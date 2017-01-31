@@ -8,13 +8,15 @@
 
 import UIKit
 import Onboard
+import MessageUI
 
 
-class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate {
     
     var onBoarded = false
     var agentSuiteCollectionView : UICollectionView!
     var agentSuiteData = SuiteData()
+    var onboardingVC = OnboardingViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,16 +67,15 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func createOnboard() {
         
-        var onboardingVC = OnboardingViewController()
         
         let firstPage = OnboardingContentViewController(title: "Welcome to Corcoran OnBoard!", body: "We are here to assist with all your onboarding needs.", image: UIImage(named: "Corcoran"), buttonText: "Continue") { () -> Void in
             
-            onboardingVC.moveNextPage()
+            self.onboardingVC.moveNextPage()
         }
         
         let secondPage = OnboardingContentViewController(title: "Training", body: "Have you completed training at the education center?", image: UIImage(named: "icon"), buttonText: "No, I need training!") { () -> Void in
             
-            //Email Education center
+            self.sendTrainingEmail()
         }
         
         let thirdPage = OnboardingContentViewController(title: "Computer Setup", body: "Has your computer been setup by helpdesk?", image: UIImage(named: "icon"), buttonText: "Request Assistance") { () -> Void in
@@ -86,7 +87,7 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
             
             print("Learn More")
             self.onBoarded = true
-            onboardingVC.dismiss(animated: true, completion: nil)
+            self.onboardingVC.dismiss(animated: true, completion: nil)
         }
         
         //Onboard VC properties
@@ -101,7 +102,7 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
         onboardingVC.allowSkipping = true
         onboardingVC.skipHandler = {
             
-            onboardingVC.moveNextPage()
+            self.onboardingVC.moveNextPage()
         }
         onboardingVC.fadeSkipButtonOnLastPage = true
         
@@ -110,6 +111,25 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
         
         self.present(onboardingVC, animated: true, completion: nil)
         
+    }
+    
+    func sendTrainingEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["Training@corcoran.com"])
+            mail.setSubject("New Agent, Need Training!")
+            mail.setMessageBody("Hello I am a new agent and I need training!", isHTML: true)
+            
+            self.onboardingVC.present(mail, animated: true)
+        } else {
+            // show failure alert
+            print("NOOOO")
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
     }
     
     func setUpEventCollectionCells() {
