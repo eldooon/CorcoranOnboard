@@ -32,8 +32,7 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
     
     override func viewDidAppear(_ animated: Bool) {
         
-//        If not onBoarded, show onboard
-        
+//        If not onBoarded, show onboard        
         if onBoarded == false {
             createOnboard()
         }
@@ -190,6 +189,8 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
+        
+        self.navigationController?.pushViewController(TaxiOnBoardViewController(), animated: true)
     }
     
 }
