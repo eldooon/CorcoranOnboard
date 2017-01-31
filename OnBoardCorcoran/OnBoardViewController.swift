@@ -190,7 +190,17 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
         
-        self.navigationController?.pushViewController(TaxiOnBoardViewController(), animated: true)
+        var agentSuiteVC = AgentSuiteViewController()
+        let suiteList = agentSuiteData.suiteData
+        
+        agentSuiteVC.suiteTitle = suiteList[indexPath.item].suiteName
+        agentSuiteVC.suiteImage = suiteList[indexPath.item].suiteImage
+        agentSuiteVC.suiteBody1 = suiteList[indexPath.item].suiteBody1
+        agentSuiteVC.suiteBody2 = suiteList[indexPath.item].suiteBody2
+        agentSuiteVC.suiteBody3 = suiteList[indexPath.item].suiteBody3
+        agentSuiteVC.suiteBodyLast = suiteList[indexPath.item].suiteBodyLast
+        
+        self.navigationController?.pushViewController(agentSuiteVC, animated: true)
     }
     
 }

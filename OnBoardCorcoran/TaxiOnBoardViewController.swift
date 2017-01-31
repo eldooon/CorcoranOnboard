@@ -9,10 +9,16 @@
 import UIKit
 import Onboard
 
-class TaxiOnBoardViewController : UIViewController {
+class AgentSuiteViewController : UIViewController {
     
     var onboardingVC = OnboardingViewController()
     var onBoarded = false
+    var suiteTitle = String()
+    var suiteImage = UIImage()
+    var suiteBody1 = String()
+    var suiteBody2 = String()
+    var suiteBody3 = String()
+    var suiteBodyLast = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,22 +37,24 @@ class TaxiOnBoardViewController : UIViewController {
     func createOnboard() {
         
         
-        let firstPage = OnboardingContentViewController(title: "Welcome to Corcoran OnBoard!", body: "We are here to assist with all your onboarding needs.", image: UIImage(named: "Corcoran"), buttonText: "Continue") { () -> Void in
+        let firstPage = OnboardingContentViewController(title: self.suiteTitle, body: self.suiteBody1, image: self.suiteImage, buttonText: "Continue") { () -> Void in
             
             self.onboardingVC.moveNextPage()
         }
         
-        let secondPage = OnboardingContentViewController(title: "Training", body: "Have you completed training at the education center?", image: UIImage(named: "icon"), buttonText: "No, I need training!") { () -> Void in
+        let secondPage = OnboardingContentViewController(title: self.suiteTitle, body: self.suiteBody2, image: self.suiteImage, buttonText: "Continue") { () -> Void in
             
+            self.onboardingVC.moveNextPage()
         }
         
-        let thirdPage = OnboardingContentViewController(title: "Computer Setup", body: "Has your computer been setup by helpdesk?", image: UIImage(named: "icon"), buttonText: "Request Assistance") { () -> Void in
+        let thirdPage = OnboardingContentViewController(title: self.suiteTitle, body: self.suiteBody3, image: self.suiteImage, buttonText: "Continue") { () -> Void in
             
+            self.onboardingVC.moveNextPage()
         }
         
-        let LastPage = OnboardingContentViewController(title: "Congratulations!", body: "You have completed onboarding! To learn more about Corcoran Applications, continue.", image: UIImage(named: "icon"), buttonText: "Learn More") { () -> Void in
+        let LastPage = OnboardingContentViewController(title: "Congratulations!", body: self.suiteBodyLast, image: self.suiteImage, buttonText: "Complete") { () -> Void in
             
-            print("Learn More")
+            print("Complete")
             self.onBoarded = true
             self.onboardingVC.dismiss(animated: true, completion: {
                 let _ = self.navigationController?.popToRootViewController(animated: true)
@@ -62,7 +70,7 @@ class TaxiOnBoardViewController : UIViewController {
         onboardingVC.pageControl.pageIndicatorTintColor = UIColor.darkGray
         onboardingVC.pageControl.currentPageIndicatorTintColor = UIColor.white
         onboardingVC.skipButton.setTitleColor(UIColor.white, for: .normal)
-        onboardingVC.allowSkipping = true
+        onboardingVC.allowSkipping = false
         onboardingVC.skipHandler = {
             
             self.onboardingVC.moveNextPage()
