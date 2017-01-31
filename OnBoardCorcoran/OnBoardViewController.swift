@@ -80,7 +80,7 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
         
         let thirdPage = OnboardingContentViewController(title: "Computer Setup", body: "Has your computer been setup by helpdesk?", image: UIImage(named: "icon"), buttonText: "Request Assistance") { () -> Void in
             
-            //Email Helpdesk
+            self.sendHelpdeskEmail()
         }
         
         let LastPage = OnboardingContentViewController(title: "Congratulations!", body: "You have completed onboarding! To learn more about Corcoran Applications, continue.", image: UIImage(named: "icon"), buttonText: "Learn More") { () -> Void in
@@ -120,6 +120,21 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
             mail.setToRecipients(["Training@corcoran.com"])
             mail.setSubject("New Agent, Need Training!")
             mail.setMessageBody("Hello I am a new agent and I need training!", isHTML: true)
+            
+            self.onboardingVC.present(mail, animated: true)
+        } else {
+            // show failure alert
+            print("NOOOO")
+        }
+    }
+    
+    func sendHelpdeskEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["Helpdesk@corcoran.com"])
+            mail.setSubject("New Agent, Need Helpdesk setup!!")
+            mail.setMessageBody("Hello I am a new agent and I need a setup!", isHTML: true)
             
             self.onboardingVC.present(mail, animated: true)
         } else {

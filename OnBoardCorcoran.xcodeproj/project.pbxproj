@@ -85,16 +85,48 @@
 			isa = PBXGroup;
 			children = (
 				BEABB1751E3B91780000E47A /* AppDelegate.swift */,
-				BEABB1771E3B91780000E47A /* OnBoardViewController.swift */,
-				BEDFCD351E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift */,
-				BED0787F1E3EC64200BEE257 /* AgentSuiteStyle.swift */,
-				BEDFCD371E3BE74800167BD8 /* AgentSuite.swift */,
-				BEABB1791E3B91780000E47A /* Main.storyboard */,
-				BEABB17C1E3B91780000E47A /* Assets.xcassets */,
-				BEABB17E1E3B91780000E47A /* LaunchScreen.storyboard */,
-				BEABB1811E3B91780000E47A /* Info.plist */,
+				BED078851E40208900BEE257 /* Model */,
+				BED078831E40207100BEE257 /* Views */,
+				BED078861E4020A800BEE257 /* Controller */,
+				BED078841E40207D00BEE257 /* Resources */,
 			);
 			path = OnBoardCorcoran;
+			sourceTree = "<group>";
+		};
+		BED078831E40207100BEE257 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEDFCD351E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BED078841E40207D00BEE257 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BED0787F1E3EC64200BEE257 /* AgentSuiteStyle.swift */,
+				BEABB1791E3B91780000E47A /* Main.storyboard */,
+				BEABB17E1E3B91780000E47A /* LaunchScreen.storyboard */,
+				BEABB17C1E3B91780000E47A /* Assets.xcassets */,
+				BEABB1811E3B91780000E47A /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BED078851E40208900BEE257 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEDFCD371E3BE74800167BD8 /* AgentSuite.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BED078861E4020A800BEE257 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BEABB1771E3B91780000E47A /* OnBoardViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
