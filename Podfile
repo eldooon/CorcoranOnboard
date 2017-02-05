@@ -7,6 +7,7 @@ target 'OnBoardCorcoran' do
 
   # Pods for OnBoardCorcoran
   pod 'Onboard'
-  pod 'SnapKit', '~> 3.1.2'
+  pod 'SnapKit', '~> 3.1.2'  
+  pod 'Firebase/Core'
 
 end

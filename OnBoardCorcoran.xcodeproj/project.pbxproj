@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE3B0FFC1E402A6900B2F3B8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B0FFB1E402A6900B2F3B8 /* Extensions.swift */; };
+		BE3B0FFE1E47C81800B2F3B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE3B0FFD1E47C81800B2F3B8 /* GoogleService-Info.plist */; };
 		BEABB1761E3B91780000E47A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABB1751E3B91780000E47A /* AppDelegate.swift */; };
 		BEABB1781E3B91780000E47A /* OnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEABB1771E3B91780000E47A /* OnBoardViewController.swift */; };
 		BEABB17B1E3B91780000E47A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEABB1791E3B91780000E47A /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		92DD41E8C646A74BF5EB9D33 /* Pods-OnBoardCorcoran.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBoardCorcoran.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnBoardCorcoran/Pods-OnBoardCorcoran.release.xcconfig"; sourceTree = "<group>"; };
 		966631AF854AD85225F9D768 /* Pods_OnBoardCorcoran.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnBoardCorcoran.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3B0FFB1E402A6900B2F3B8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BE3B0FFD1E47C81800B2F3B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BEABB1721E3B91780000E47A /* OnBoardCorcoran.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnBoardCorcoran.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEABB1751E3B91780000E47A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEABB1771E3B91780000E47A /* OnBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				BEABB17C1E3B91780000E47A /* Assets.xcassets */,
 				BEABB1811E3B91780000E47A /* Info.plist */,
 				BE3B0FFB1E402A6900B2F3B8 /* Extensions.swift */,
+				BE3B0FFD1E47C81800B2F3B8 /* GoogleService-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				BEABB1801E3B91780000E47A /* LaunchScreen.storyboard in Resources */,
 				BEABB17D1E3B91780000E47A /* Assets.xcassets in Resources */,
 				BEABB17B1E3B91780000E47A /* Main.storyboard in Resources */,
+				BE3B0FFE1E47C81800B2F3B8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
