@@ -9,5 +9,7 @@ target 'OnBoardCorcoran' do
   pod 'Onboard'
   pod 'SnapKit', '~> 3.1.2'  
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
 
 end

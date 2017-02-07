@@ -9,6 +9,7 @@
 import UIKit
 import Onboard
 import MessageUI
+import Firebase
 
 
 class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate {
@@ -17,20 +18,23 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
     var agentSuiteCollectionView : UICollectionView!
     var agentSuiteData = SuiteData()
     var onboardingVC = OnboardingViewController()
+    let data = FirebaseData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
-        agentSuiteData.generateSuiteData()
+        data.retrieveData()
         setUpEventCollectionCells()
         createLayout()
+        print("COUNT FROM CONTROLLER \(data.firebaseData.count)")
         
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        agentSuiteCollectionView.reloadData()
         
 //        If not onBoarded, show onboard        
         if onBoarded == false {
@@ -171,7 +175,7 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return agentSuiteData.suiteData.count
+        return data.firebaseData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -179,8 +183,8 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! AgentSuiteCollectionViewCell
         
-        cell.agentSuiteImageView.image = agentSuiteData.suiteData[indexPath.item].suiteImage
-        cell.agentSuiteLabel.text = agentSuiteData.suiteData[indexPath.item].suiteName
+        cell.agentSuiteImageView.image = data.firebaseData[indexPath.item].suiteImage
+        cell.agentSuiteLabel.text = data.firebaseData[indexPath.item].suiteName
         
         
         return cell
@@ -191,7 +195,7 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
         print("You selected cell #\(indexPath.item)!")
         
         var agentSuiteVC = AgentSuiteViewController()
-        let suiteList = agentSuiteData.suiteData
+        let suiteList = data.firebaseData
         
         agentSuiteVC.suiteTitle = suiteList[indexPath.item].suiteName
         agentSuiteVC.suiteImage = suiteList[indexPath.item].suiteImage
