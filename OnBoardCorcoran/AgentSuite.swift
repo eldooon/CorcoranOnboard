@@ -54,6 +54,12 @@ public class Suite {
             return AgentSuiteStyle.imageOfMarketingCenter
         case "Contactually":
             return AgentSuiteStyle.imageOfContactually
+        case "Lear":
+            return AgentSuiteStyle.imageOfLear
+        case "Vesta":
+            return AgentSuiteStyle.imageOfVesta
+        case "XpressDocs":
+            return AgentSuiteStyle.imageOfXpressDocs
         default:
             return AgentSuiteStyle.imageOfTaxi
             
