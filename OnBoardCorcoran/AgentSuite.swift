@@ -68,22 +68,3 @@ public class Suite {
     
 }
 
-class SuiteData {
-    
-    var suiteData = [Suite]()
-    
-    let taxiData = Suite(Image: AgentSuiteStyle.imageOfTaxi, Name: "Taxi", body1: "Taxi Info", body2: "Taxi Info", body3: "Taxi Info", bodyLast: "Taxi Info")
-    let spacioData = Suite(Image: AgentSuiteStyle.imageOfSpacio, Name: "Spacio", body1: "Spacio Info", body2: "Spacio Info", body3: "Spacio Info", bodyLast: "Spacio Info")
-    let ImprevData = Suite(Image: AgentSuiteStyle.imageOfMarketingCenter, Name: "Marketing Center", body1: "Marketing Center Info", body2: "Marketing Center Info", body3: "Marketing Center Info", bodyLast: "Marketing Center Info")
-    let contactuallyData = Suite(Image: AgentSuiteStyle.imageOfContactually, Name: "Contactually", body1: "Contactually Info", body2: "Contactually Info", body3: "Contactually Info", bodyLast: "Contactually Info")
-    
-    func generateSuiteData() {
-        
-        suiteData.append(taxiData)
-        suiteData.append(spacioData)
-        suiteData.append(ImprevData)
-        suiteData.append(contactuallyData)
-    }
-}
-
-
