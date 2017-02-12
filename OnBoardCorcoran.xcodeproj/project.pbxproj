@@ -15,6 +15,7 @@
 		BEABB17B1E3B91780000E47A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEABB1791E3B91780000E47A /* Main.storyboard */; };
 		BEABB17D1E3B91780000E47A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEABB17C1E3B91780000E47A /* Assets.xcassets */; };
 		BEABB1801E3B91780000E47A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEABB17E1E3B91780000E47A /* LaunchScreen.storyboard */; };
+		BEAD88561E4D1C8E00973C95 /* MoreMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD88551E4D1C8E00973C95 /* MoreMenuLauncher.swift */; };
 		BED078801E3EC64200BEE257 /* AgentSuiteStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0787F1E3EC64200BEE257 /* AgentSuiteStyle.swift */; };
 		BED078881E40248C00BEE257 /* TaxiOnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED078871E40248C00BEE257 /* TaxiOnBoardViewController.swift */; };
 		BEDFCD361E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFCD351E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift */; };
@@ -36,6 +37,7 @@
 		BEABB17C1E3B91780000E47A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEABB17F1E3B91780000E47A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEABB1811E3B91780000E47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEAD88551E4D1C8E00973C95 /* MoreMenuLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuLauncher.swift; sourceTree = "<group>"; };
 		BED0787F1E3EC64200BEE257 /* AgentSuiteStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSuiteStyle.swift; sourceTree = "<group>"; };
 		BED078871E40248C00BEE257 /* TaxiOnBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiOnBoardViewController.swift; sourceTree = "<group>"; };
 		BEDFCD351E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSuiteCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				BEABB1771E3B91780000E47A /* OnBoardViewController.swift */,
+				BEAD88551E4D1C8E00973C95 /* MoreMenuLauncher.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEAD88561E4D1C8E00973C95 /* MoreMenuLauncher.swift in Sources */,
 				BE3B10001E47CEBC00B2F3B8 /* FirebaseData.swift in Sources */,
 				BED078801E3EC64200BEE257 /* AgentSuiteStyle.swift in Sources */,
 				BEDFCD381E3BE74800167BD8 /* AgentSuite.swift in Sources */,

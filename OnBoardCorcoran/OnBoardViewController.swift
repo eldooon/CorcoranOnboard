@@ -16,9 +16,9 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
     
     var onBoarded = false
     var agentSuiteCollectionView : UICollectionView!
-    var agentSuiteData = SuiteData()
     var onboardingVC = OnboardingViewController()
     let data = FirebaseData()
+    let moreMenuLauncher = MoreMenuLauncher()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,9 +37,9 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
         agentSuiteCollectionView.reloadData()
         
 //        If not onBoarded, show onboard        
-        if onBoarded == false {
-            createOnboard()
-        }
+//        if onBoarded == false {
+//            createOnboard()
+//        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,7 +52,7 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         self.navigationController?.navigationBar.barTintColor = UIColor.black
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: AgentSuiteStyle.imageOfMoreButton, style: .done, target: self, action: nil)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: AgentSuiteStyle.imageOfMoreButton, style: .done, target: self, action: #selector(moreButtonTapped))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: AgentSuiteStyle.imageOfSearchButton, style: .done, target: self, action: nil)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.title = "Corcoran OnBoard"
@@ -148,6 +148,12 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
+    }
+    
+    func moreButtonTapped() {
+        
+        moreMenuLauncher.showMenu()
+    
     }
     
     func setUpEventCollectionCells() {
