@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1763A91E50EC03001F5FE6 /* MenuLauncherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1763A81E50EC03001F5FE6 /* MenuLauncherCollectionViewCell.swift */; };
+		BE1763AB1E520B55001F5FE6 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1763AA1E520B55001F5FE6 /* MenuItems.swift */; };
 		BE3B0FFC1E402A6900B2F3B8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B0FFB1E402A6900B2F3B8 /* Extensions.swift */; };
 		BE3B0FFE1E47C81800B2F3B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE3B0FFD1E47C81800B2F3B8 /* GoogleService-Info.plist */; };
 		BE3B10001E47CEBC00B2F3B8 /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B0FFF1E47CEBC00B2F3B8 /* FirebaseData.swift */; };
@@ -27,6 +29,8 @@
 		518AAB468298C90549AE0045 /* Pods-OnBoardCorcoran.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBoardCorcoran.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnBoardCorcoran/Pods-OnBoardCorcoran.debug.xcconfig"; sourceTree = "<group>"; };
 		92DD41E8C646A74BF5EB9D33 /* Pods-OnBoardCorcoran.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnBoardCorcoran.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnBoardCorcoran/Pods-OnBoardCorcoran.release.xcconfig"; sourceTree = "<group>"; };
 		966631AF854AD85225F9D768 /* Pods_OnBoardCorcoran.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnBoardCorcoran.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1763A81E50EC03001F5FE6 /* MenuLauncherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLauncherCollectionViewCell.swift; sourceTree = "<group>"; };
+		BE1763AA1E520B55001F5FE6 /* MenuItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
 		BE3B0FFB1E402A6900B2F3B8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BE3B0FFD1E47C81800B2F3B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE3B0FFF1E47CEBC00B2F3B8 /* FirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
@@ -107,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDFCD351E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift */,
-				BED078871E40248C00BEE257 /* TaxiOnBoardViewController.swift */,
+				BE1763A81E50EC03001F5FE6 /* MenuLauncherCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -131,6 +135,7 @@
 			children = (
 				BEDFCD371E3BE74800167BD8 /* AgentSuite.swift */,
 				BE3B0FFF1E47CEBC00B2F3B8 /* FirebaseData.swift */,
+				BE1763AA1E520B55001F5FE6 /* MenuItems.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				BEABB1771E3B91780000E47A /* OnBoardViewController.swift */,
+				BED078871E40248C00BEE257 /* TaxiOnBoardViewController.swift */,
 				BEAD88551E4D1C8E00973C95 /* MoreMenuLauncher.swift */,
 			);
 			name = Controller;
@@ -269,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1763AB1E520B55001F5FE6 /* MenuItems.swift in Sources */,
 				BEAD88561E4D1C8E00973C95 /* MoreMenuLauncher.swift in Sources */,
 				BE3B10001E47CEBC00B2F3B8 /* FirebaseData.swift in Sources */,
 				BED078801E3EC64200BEE257 /* AgentSuiteStyle.swift in Sources */,
@@ -278,6 +285,7 @@
 				BED078881E40248C00BEE257 /* TaxiOnBoardViewController.swift in Sources */,
 				BEABB1761E3B91780000E47A /* AppDelegate.swift in Sources */,
 				BE3B0FFC1E402A6900B2F3B8 /* Extensions.swift in Sources */,
+				BE1763A91E50EC03001F5FE6 /* MenuLauncherCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
