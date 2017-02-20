@@ -37,9 +37,9 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
         agentSuiteCollectionView.reloadData()
         
 //        If not onBoarded, show onboard        
-//        if onBoarded == false {
-//            createOnboard()
-//        }
+        if onBoarded == false {
+            createOnboard()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -210,7 +210,7 @@ class OnBoardViewController: UIViewController, UICollectionViewDataSource, UICol
         agentSuiteVC.suiteBody3 = suiteList[indexPath.item].suiteBody3
         agentSuiteVC.suiteBodyLast = suiteList[indexPath.item].suiteBodyLast
         
-        self.navigationController?.pushViewController(agentSuiteVC, animated: true)
+        self.navigationController?.present(agentSuiteVC, animated: true, completion: nil)
     }
     
 }

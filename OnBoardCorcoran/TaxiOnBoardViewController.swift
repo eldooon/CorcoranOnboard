@@ -57,7 +57,7 @@ class AgentSuiteViewController : UIViewController {
             print("Complete")
             self.onBoarded = true
             self.onboardingVC.dismiss(animated: true, completion: {
-                let _ = self.navigationController?.popToRootViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
             })
         }
         
@@ -82,10 +82,6 @@ class AgentSuiteViewController : UIViewController {
         
         self.present(onboardingVC, animated: true, completion: nil)
         
-    }
-    
-    func popToTheRootOfNav() {
-        navigationController?.popToRoot(animated: true)
     }
     
 }
