@@ -23,7 +23,7 @@ public class MenuItem {
 
 class MenuLauncherItems {
     
-    var menuItems = [MenuItem(Image: AgentSuiteStyle.imageOfItem, Name: "Menu Item"), MenuItem(Image: AgentSuiteStyle.imageOfItem, Name: "Menu Item"), MenuItem(Image: AgentSuiteStyle.imageOfItem, Name: "Menu Item"), MenuItem(Image: AgentSuiteStyle.imageOfItem, Name: "Menu Item"), MenuItem(Image: AgentSuiteStyle.imageOfItem, Name: "Menu Item")]
+    var menuItems = [MenuItem(Image: AgentSuiteStyle.imageOfItem, Name: "Corcoran"), MenuItem(Image: AgentSuiteStyle.imageOfItem, Name: "Taxi"), MenuItem(Image: AgentSuiteStyle.imageOfItem, Name: "eCorcoran"), MenuItem(Image: AgentSuiteStyle.imageOfItem, Name: "Listings"), MenuItem(Image: AgentSuiteStyle.imageOfItem, Name: "Helpdesk")]
     
     func generateMenuItems() {
         

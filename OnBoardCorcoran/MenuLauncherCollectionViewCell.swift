@@ -20,8 +20,8 @@ class MenuLauncherCollectionViewCell: UICollectionViewCell {
         itemImageView.snp.makeConstraints { (make) in
             make.left.equalTo(contentView.snp.left).offset(20)
             make.centerX.equalTo(contentView.snp.centerX)
-            make.height.equalTo(contentView.snp.height).dividedBy(1.25)
-            make.width.equalTo(contentView.snp.height).dividedBy(1.25)
+            make.height.equalTo(contentView.snp.height).dividedBy(2)
+            make.width.equalTo(contentView.snp.height).dividedBy(2)
         }
         
         
