@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Foundation
+import MessageUI
 
-class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate {
     
     var darkenView = UIView()
     var menuCollectionView : UICollectionView = {
@@ -80,6 +82,36 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
         
+        if indexPath.item  == 0 {
+            
+            UIApplication.shared.open(URL(string: "https://corcoran.com")!)
+        }
+        
+        if indexPath.item  == 1 {
+            
+            UIApplication.shared.open(URL(string: "https://taxi.corcoran.com")!)
+        }
+        
+        if indexPath.item  == 2 {
+            
+            UIApplication.shared.open(URL(string: "https://ecorcoran.com")!)
+        }
+        
+        if indexPath.item  == 3 {
+            
+            self.sendListingEmail()
+        }
+        
+        if indexPath.item  == 4 {
+            
+            self.sendHelpdeskEmail()
+        }
+        
+        if indexPath.item == 5 {
+            
+            self.sendPizzaEmail()
+        }
+        
     }
     
     
@@ -106,6 +138,51 @@ class MoreMenuLauncher : NSObject, UICollectionViewDelegate, UICollectionViewDat
         
     }
     
+    func sendListingEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["Listing@corcoran.com"])
+            mail.setSubject("")
+            mail.setMessageBody("Hello I am a new agent and I need training!", isHTML: true)
+            
+        } else {
+            // show failure alert
+            print("NOOOO")
+        }
+    }
+    
+    func sendHelpdeskEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["Helpdesk@corcoran.com"])
+            mail.setSubject("Requesting Assistance")
+            mail.setMessageBody("I need help!", isHTML: true)
+            
+        } else {
+            // show failure alert
+            print("NOOOO")
+        }
+    }
+    
+    func sendPizzaEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["Najee.Bryant@corcoran.com"])
+            mail.setSubject("I NEED PIZZA!!!")
+            mail.setMessageBody("PIZZA!!!!", isHTML: true)
+            
+        } else {
+            // show failure alert
+            print("NOOOO")
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
     
     
 

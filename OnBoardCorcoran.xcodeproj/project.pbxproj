@@ -19,7 +19,7 @@
 		BEABB1801E3B91780000E47A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEABB17E1E3B91780000E47A /* LaunchScreen.storyboard */; };
 		BEAD88561E4D1C8E00973C95 /* MoreMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAD88551E4D1C8E00973C95 /* MoreMenuLauncher.swift */; };
 		BED078801E3EC64200BEE257 /* AgentSuiteStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED0787F1E3EC64200BEE257 /* AgentSuiteStyle.swift */; };
-		BED078881E40248C00BEE257 /* TaxiOnBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED078871E40248C00BEE257 /* TaxiOnBoardViewController.swift */; };
+		BED078881E40248C00BEE257 /* AgentSuiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED078871E40248C00BEE257 /* AgentSuiteViewController.swift */; };
 		BEDFCD361E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFCD351E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift */; };
 		BEDFCD381E3BE74800167BD8 /* AgentSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDFCD371E3BE74800167BD8 /* AgentSuite.swift */; };
 		ED3E21730D23F285324DA157 /* Pods_OnBoardCorcoran.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 966631AF854AD85225F9D768 /* Pods_OnBoardCorcoran.framework */; };
@@ -43,7 +43,7 @@
 		BEABB1811E3B91780000E47A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEAD88551E4D1C8E00973C95 /* MoreMenuLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuLauncher.swift; sourceTree = "<group>"; };
 		BED0787F1E3EC64200BEE257 /* AgentSuiteStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSuiteStyle.swift; sourceTree = "<group>"; };
-		BED078871E40248C00BEE257 /* TaxiOnBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxiOnBoardViewController.swift; sourceTree = "<group>"; };
+		BED078871E40248C00BEE257 /* AgentSuiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSuiteViewController.swift; sourceTree = "<group>"; };
 		BEDFCD351E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSuiteCollectionViewCell.swift; sourceTree = "<group>"; };
 		BEDFCD371E3BE74800167BD8 /* AgentSuite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgentSuite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				BEABB1771E3B91780000E47A /* OnBoardViewController.swift */,
-				BED078871E40248C00BEE257 /* TaxiOnBoardViewController.swift */,
+				BED078871E40248C00BEE257 /* AgentSuiteViewController.swift */,
 				BEAD88551E4D1C8E00973C95 /* MoreMenuLauncher.swift */,
 			);
 			name = Controller;
@@ -282,7 +282,7 @@
 				BEDFCD381E3BE74800167BD8 /* AgentSuite.swift in Sources */,
 				BEABB1781E3B91780000E47A /* OnBoardViewController.swift in Sources */,
 				BEDFCD361E3BE28D00167BD8 /* AgentSuiteCollectionViewCell.swift in Sources */,
-				BED078881E40248C00BEE257 /* TaxiOnBoardViewController.swift in Sources */,
+				BED078881E40248C00BEE257 /* AgentSuiteViewController.swift in Sources */,
 				BEABB1761E3B91780000E47A /* AppDelegate.swift in Sources */,
 				BE3B0FFC1E402A6900B2F3B8 /* Extensions.swift in Sources */,
 				BE1763A91E50EC03001F5FE6 /* MenuLauncherCollectionViewCell.swift in Sources */,
